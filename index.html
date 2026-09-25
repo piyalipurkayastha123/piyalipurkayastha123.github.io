@@ -33,9 +33,8 @@
       <div>
         <span class="eyebrow">Writer and Editor · India · 6 yrs experience</span>
         <h1>Words that make <em>complex ideas simple.</em></h1>
-        <p class="lead">I am Piyali Purkayastha. I write analytical essays on money, health, climate and the craft of writing — original, deeply reasoned, jargon-free.</p>
+        <p class="lead">I am Piyali Purkayastha. I write analytical content on money, health, climate and the craft of writing — original, deeply reasoned, jargon-free.</p>
         <div class="hero-cta">
-          <a href="#work" class="btn">View selected work</a>
           <a href="mailto:piyalipurkayastha123@gmail.com" class="btn ghost">Hire me</a>
         </div>
       </div>
@@ -51,16 +50,6 @@
 </section>
 
 <main class="wrap">
-  <section id="work" class="section">
-    <div class="section-head split">
-      <div>
-        <h2>Selected work</h2>
-        <p>Essays and analysis — filter by topic, or start anywhere.</p>
-      </div>
-    </div>
-    <div class="filters" id="filters"></div>
-    <div class="grid" id="post-grid"></div>
-  </section>
 
   <section id="services" class="section">
     <div class="section-head">
@@ -144,12 +133,7 @@ function renderFilters(){
     });
   });
 }
-function renderGrid(){
-  var list = POSTS.filter(function(p){ return ACTIVE_CAT==="All" || p[2]===ACTIVE_CAT; });
-  document.getElementById("post-grid").innerHTML = list.length
-    ? list.map(cardHTML).join("") + '<div class="empty-note">Showing all '+list.length+' essays</div>'
-    : '<div class="empty-note">No essays in this topic yet.</div>';
-}
+
 renderFilters(); renderGrid();
 </script>
 
