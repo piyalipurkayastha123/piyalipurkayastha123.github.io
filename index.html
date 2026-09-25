@@ -145,8 +145,8 @@ function renderFilters(){
 function renderGrid(){
   var list = POSTS.filter(function(p){ return ACTIVE_CAT==="All" || p[2]===ACTIVE_CAT; });
   document.getElementById("post-grid").innerHTML = list.length
-    ? list.map(cardHTML).join("") + '<div class="empty-note">Showing all '+list.length+' essays</div>'
-    : '<div class="empty-note">No essays in this topic yet.</div>';
+    ? list.map(cardHTML).join("") 
+    : '';
 }
 renderFilters(); renderGrid();
 </script>
